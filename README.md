@@ -17,6 +17,8 @@ Run Mac OS X 10.4 Tiger in QEMU with style — this script sets up a modern Impo
 
 - Designed for QEMU virtual machines running Mac OS X 10.4 Tiger
 
+- Networking is built in! Yes, Tiger is automatically connected to the internet
+
 ## Quick Start
 
 ```bash
@@ -35,11 +37,7 @@ Your `host.iso` will be generated automatically and ready to mount in your QEMU 
 
 ## What’s Inside?
 
-| Script/File     | Description                                  |
-|-----------------|----------------------------------------------|
-| `setup.sh`      | Builds the hybrid `host.iso` with folders    |
-| `export-copy.sh`| Syncs files from the VM's Export folder back |
-| `qemu.sh`       | (Optional) Prebuilt QEMU launch script       |
+A prebuilt .command file to open the VM with all the features, with the HOST drive mounted.
 
 ## Folder Layout
 
