@@ -1,26 +1,74 @@
-NOTE: YOU MUST HAVE A MACOS X 10.4 .IMG FILE ALREADY. IF YOU DO, PLACE IT IN THE SYSTEM DIR AND NAME IT "osx.img"
+# Mac OS X QEMU Toolkit
 
-Welcome!
+Run Mac OS X 10.4 Tiger in QEMU with style — this script sets up a modern Import/Export workflow using a hybrid ISO, so you can transfer files in and out of the VM with ease.
 
-This program is for easily creating and moving files between the host OS and Guest OS in a safe way, because QEMU does not natively support it.
+## Features
 
-This works by mounting a .dmg to the host OS with two folders:
+- Seamless Import/Export folder  
+  Share files between host and guest using a hybrid ISO with `Import` and `Export` folders.
 
-1. Import
-and 2. Export
+- Auto-export after shutdown  
+  Automatically syncs files from the VM’s `Export` folder back to your host machine.
 
-You can import files to the guest system by dragging files to the "import_to_guest" folder, and the files you dragged there will appear in the guest system in the HOST drive, in the "Import" folder.
+- Hybrid ISO creation  
+  Fully bootable and usable ISO that mounts in both QEMU and classic macOS.
 
-The same goes the OPPOSITE way, if you drag files in the guest system to the "Export" folder in the HOST drive, it will appear in the Host OS in the export_from_guest folder.
+- Designed for QEMU virtual machines running Mac OS X 10.4 Tiger
 
-To get everything working, you must double click the boot.command file to run the OS with the HOST drive installed. This file is also responsible for managing imports and exports. If you distrust this file, you can easily verify the code by right-clicking it, and select open with, and select "TextEdit" (or your favorite code editing program)
+## Quick Start
 
-Also, if you want to mount an additional ISO file (like a installer) you can do so by dragging in your ISO and naming it "mount-me.iso" and it will mount!
+```bash
+git clone https://github.com/yourusername/qemu-macosx-tools.git
+cd qemu-macosx-tools
+./setup.sh
+```
 
-I hope you enjoy my software!
+Your `host.iso` will be generated automatically and ready to mount in your QEMU VM.
 
-P.S. You can ignore the "system" directory, because that is the directory used by the program.
+## Requirements
 
-----------------------------
-©Birdie Works '25, all rights reserved.
-Software written by JBlueBird (https://github.com/JBlueBird)
+- macOS or Linux host
+- QEMU
+- `mkisofs` or `genisoimage`
+
+## What’s Inside?
+
+| Script/File     | Description                                  |
+|-----------------|----------------------------------------------|
+| `setup.sh`      | Builds the hybrid `host.iso` with folders    |
+| `export-copy.sh`| Syncs files from the VM's Export folder back |
+| `qemu.sh`       | (Optional) Prebuilt QEMU launch script       |
+
+## Folder Layout
+
+Inside the ISO, you’ll find:
+
+```
+HOST/
+├── Import/
+└── Export/
+```
+
+## Why This Is Cool
+
+- No need for network file sharing
+- Works on real vintage Mac software
+- Keeps your Mac OS X 10.4 VM isolated but connected
+
+## Like this project?
+
+Please star the repo to support retro Mac tools!
+
+## License
+
+MIT — do what you want, but credit appreciated.
+
+## Credits
+
+Made by [Your Name] — inspired by vintage computing and making retro Macs useful again.
+
+## To Do
+
+- [ ] Add file type filtering (e.g. ignore `.DS_Store`)
+- [ ] Auto-build ISO on guest shutdown
+- [ ] Optional compression for exports
