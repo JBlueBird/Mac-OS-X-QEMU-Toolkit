@@ -1,5 +1,7 @@
 # Mac OS X QEMU Toolkit
 
+Note: You need a MacOS X Tiger .img file ready to go. If you have it, place it in the system directory or the code script will NOT work without the VM. Name the .img "osx.img"
+
 Run Mac OS X 10.4 Tiger in QEMU with style — this script sets up a modern Import/Export workflow using a hybrid ISO, so you can transfer files in and out of the VM with ease.
 
 ## Features
