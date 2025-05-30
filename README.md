@@ -65,7 +65,7 @@ MIT — do what you want, but credit appreciated.
 
 ## Credits
 
-Made by [Your Name] — inspired by vintage computing and making retro Macs useful again.
+Made by Josiah — inspired by vintage computing and making retro Macs useful again.
 
 ## To Do
 
