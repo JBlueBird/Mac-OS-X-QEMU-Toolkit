@@ -23,7 +23,7 @@ Run Mac OS X 10.4 Tiger in QEMU with style — this script sets up a modern Impo
 
 ```bash
 git clone https://github.com/jbluebird/Mac-OS-X-QEMU-Toolkit.git
-cd qemu-macosx-tools
+cd Mac-OS-X-QEMU-Toolkit
 ```
 
 Your `host.iso` will be generated automatically and ready to mount in your QEMU VM.
