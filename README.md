@@ -20,7 +20,7 @@ Run Mac OS X 10.4 Tiger in QEMU with style — this script sets up a modern Impo
 ## Quick Start
 
 ```bash
-git clone https://github.com/yourusername/qemu-macosx-tools.git
+git clone https://github.com/jbluebird/qemu-macosx-tools.git
 cd qemu-macosx-tools
 ./setup.sh
 ```
